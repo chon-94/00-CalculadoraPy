@@ -1,3 +1,5 @@
+import math
+
 while True:
 
     def Suma(valores):
@@ -28,7 +30,10 @@ while True:
         2.- Resta 
         3.- Division 
         4.- Multiplicacion 
-        Seleccione una operación (1/2/3/4): """)
+        5.- Elevación
+        6.- Raíz Cuadrada
+        7.- Porcentaje
+        Seleccione una operación (1/2/3/4/5/6/7): """)
 
         if operacion == '1':
             print("\nSUMA\n")
@@ -69,7 +74,30 @@ while True:
 
             resultado = Multiplicacion(valores)
             print("Resultado de la multiplicación:", resultado)    
-            
+        
+        elif operacion == '5':
+            print("\nELEVACIÓN\n")
+            base = float(input("Ingresa la base: "))
+            exponente = float(input("Ingresa el exponente: "))
+            resultado = base ** exponente
+            print(f"Resultado de {base} ^ {exponente}: {resultado}\n")
+
+        elif operacion == '6':
+            print("\nRAÍZ\n")
+            indice = int(input("Ingresa el índice de la raíz: "))
+            numero = float(input("Ingresa el número para calcular su raíz: "))
+            resultado = numero ** (1 / indice)
+            print(f"Raíz {indice} de {numero}: {resultado}\n")
+
+        elif operacion == '7':
+            print("\nPORCENTAJE\n")
+            expresion = input("Ingresa la expresión (ejemplo: 100 * 10%): ")
+            try:
+                resultado = eval(expresion)
+                print(f"Resultado de {expresion}: {resultado}\n")
+            except:
+                print("Expresión inválida\n")            
+        
         else:
             print("\nOperación inválida... solo ingresa numeros enteros del 1 al 4")
             # continue        
