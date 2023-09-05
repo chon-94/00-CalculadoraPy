@@ -31,7 +31,7 @@ while True:
         3.- Division 
         4.- Multiplicacion 
         5.- Elevación
-        6.- Raíz Cuadrada
+        6.- Raíz
         7.- Porcentaje
         Seleccione una operación (1/2/3/4/5/6/7): """)
 
@@ -85,26 +85,46 @@ while True:
         elif operacion == '6':
             print("\nRAÍZ\n")
             indice = int(input("Ingresa el índice de la raíz: "))
-            numero = float(input("Ingresa el número para calcular su raíz: "))
-            resultado = numero ** (1 / indice)
+            numero = int(input("Ingresa el número para calcular su raíz: "))
+            
+            resultado = numero**(1/indice)
+
+            
             print(f"Raíz {indice} de {numero}: {resultado}\n")
 
         elif operacion == '7':
             print("\nPORCENTAJE\n")
-            expresion = input("Ingresa la expresión (ejemplo: 100 * 10%): ")
-            try:
-                resultado = eval(expresion)
-                print(f"Resultado de {expresion}: {resultado}\n")
-            except:
-                print("Expresión inválida\n")            
+            numero = int(input("ingrese el numero al que le quieres sacar el porcentaje : "))
+            porcen = int(input ("ingrese el porcentaje : "))
+            taje =  (porcen/100)
+            print (numero*taje)
         
         else:
-            print("\nOperación inválida... solo ingresa numeros enteros del 1 al 4")
-            # continue        
+            print("\nOperación inválida... solo ingresa numeros enteros del 1 al 7")
 
     calculadora()
 
-    continuar = input("Deseas Continuar? - SI/NO: ")
-    if continuar.upper() != "SI":
-        print("\n¡Hasta luego!\n")
-        break
+    # while True :    
+        # continuar = input("Deseas Continuar? - SI/NO: ")
+        # if continuar.upper() != "SI" and continuar.upper() != "si" and continuar.upper() != "yes" :
+        #     print("\n¡Hasta luego!\n")
+        #     break
+
+    # continuar = input("Deseas Continuar? - SI/NO: ")
+    # if continuar == "SI" and continuar == "si" and continuar == "yes" :
+    #     continue
+    # elif continuar == "NO" and continuar == "no" and continuar == "not" :
+    #     print("\n¡Hasta luego!\n")
+    #     break
+    # else :
+    #     print("\n¡ingresaste mal algo jejeje!\n")
+    #     continue
+    while True:
+        continuar = input("Deseas Continuar? - SI/NO: ")
+        if continuar.upper() in ["SI", "YES"]:
+            break
+        elif continuar.upper() in ["NO", "NOT"]:
+            print("\n¡Hasta luego!\n")
+            exit()  
+        else:
+            print("\n¡Ingresaste algo no válido!\n")
