@@ -60,12 +60,13 @@ while True:
             print("Resultado:", Resta(valores))
             
         elif operacion == '3':
-            print("\nSUMA\n")
+            print("\nDIVISION\n")
             n1 = float(input("Ingresa el numerador : "))
             n2 = float(input("Ingresa el denominador : "))
             print("Resultado : ", Division(n1, n2))
             
         elif operacion == '4':
+            print("\nMULTIPLICACION\n")
             cantidad = int(input("Ingresa la cantidad de números que deseas multiplicar : "))
             valores = []
 
