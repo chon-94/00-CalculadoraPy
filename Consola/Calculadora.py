@@ -6,7 +6,6 @@ while True:
         return sum(valores)
 
     def Resta(valores):
-        
         result = valores[0]
         for valor in valores[1:]:
             result -= valor
@@ -15,13 +14,11 @@ while True:
     def Division(a,b):
         if b != 0:
             return a / b
-        
         else:
             return "No se puede dividir por cero"
 
     def Multiplicacion(valores):
         result = 1
-        
         for valor in valores:
             result *= valor
         return result
@@ -42,7 +39,6 @@ while True:
             print("\nSUMA\n")
             cantidad = int(input("Ingresa la cantidad de números que deseas operar : "))
             valores = []
-
             for i in range(cantidad):
                 valor = float(input(f"Ingrese el valor {i + 1} : "))
                 valores.append(valor)
@@ -53,7 +49,6 @@ while True:
             print("\nRESTA\n")
             cantidad = int(input("Ingresa la cantidad de números que deseas operar: "))
             valores = []
-            
             for i in range(cantidad):
                 valor = float(input(f"Ingrese el valor {i + 1}: "))
                 valores.append(valor)
@@ -69,7 +64,6 @@ while True:
             print("\nMULTIPLICACION\n")
             cantidad = int(input("Ingresa la cantidad de números que deseas multiplicar : "))
             valores = []
-
             for i in range(cantidad):
                 valor = float(input(f"Ingrese el valor {i + 1} : "))
                 valores.append(valor)
